@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  portainertest:
+    image: ${DOCKER_REGISTRY-}portainertest
+    build:
+      context: .
+      dockerfile: PortainerTest/Dockerfile
+    ports:
+       - "49159:80"
